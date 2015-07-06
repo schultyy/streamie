@@ -7,9 +7,10 @@
 //
 
 #import "STMainController.h"
+#import "STFeedSheet.h"
 
 @interface STMainController ()
-
+@property (retain) STFeedSheet *feedSheet;
 @end
 
 @implementation STMainController
@@ -26,7 +27,14 @@
 }
 
 -(void)addFeed {
-    NSLog(@"Add feed");
+    [self setFeedSheet: [[STFeedSheet alloc] init]];
+    [NSApp beginSheet:self.feedSheet.window modalForWindow:self.window modalDelegate:self didEndSelector:@selector(didEnd:returnCode:context:) contextInfo:NULL];
+}
+
+-(void)didEnd:(NSWindow *) sheet
+   returnCode:(NSInteger) returnCode
+      context:(void *) context {
+    NSLog(@"return code %ld", (long)returnCode);
 }
 
 @end
