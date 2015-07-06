@@ -26,6 +26,10 @@
     // Insert code here to tear down your application
 }
 
+-(IBAction)addFeed:(id)sender {
+    [[self mainController] addFeed];
+}
+
 #pragma mark - Core Data stack
 
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;

@@ -16,5 +16,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong) STMainController *mainController;
 
+-(IBAction)addFeed:(id)sender;
+
 @end
 

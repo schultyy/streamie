@@ -10,4 +10,6 @@
 
 @interface STMainController : NSWindowController
 
+-(void)addFeed;
+
 @end
