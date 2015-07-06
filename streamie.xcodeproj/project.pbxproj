@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4025B811B4AFD22000C2271 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4025B801B4AFD22000C2271 /* AppDelegate.m */; };
+		D4025B831B4AFD22000C2271 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4025B821B4AFD22000C2271 /* main.m */; };
+		D4025B861B4AFD22000C2271 /* streamie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4025B841B4AFD22000C2271 /* streamie.xcdatamodeld */; };
+		D4025B881B4AFD22000C2271 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4025B871B4AFD22000C2271 /* Images.xcassets */; };
+		D4025B8B1B4AFD22000C2271 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4025B891B4AFD22000C2271 /* MainMenu.xib */; };
+		D4025B971B4AFD22000C2271 /* streamieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4025B961B4AFD22000C2271 /* streamieTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4025B911B4AFD22000C2271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4025B721B4AFD22000C2271 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4025B791B4AFD22000C2271;
+			remoteInfo = streamie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4025B7A1B4AFD22000C2271 /* streamie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = streamie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4025B7E1B4AFD22000C2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4025B7F1B4AFD22000C2271 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4025B801B4AFD22000C2271 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4025B821B4AFD22000C2271 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4025B851B4AFD22000C2271 /* streamie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = streamie.xcdatamodel; sourceTree = "<group>"; };
+		D4025B871B4AFD22000C2271 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D4025B8A1B4AFD22000C2271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D4025B901B4AFD22000C2271 /* streamieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = streamieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4025B951B4AFD22000C2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4025B961B4AFD22000C2271 /* streamieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = streamieTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4025B771B4AFD22000C2271 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4025B8D1B4AFD22000C2271 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4025B711B4AFD22000C2271 = {
+			isa = PBXGroup;
+			children = (
+				D4025B7C1B4AFD22000C2271 /* streamie */,
+				D4025B931B4AFD22000C2271 /* streamieTests */,
+				D4025B7B1B4AFD22000C2271 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4025B7B1B4AFD22000C2271 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4025B7A1B4AFD22000C2271 /* streamie.app */,
+				D4025B901B4AFD22000C2271 /* streamieTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4025B7C1B4AFD22000C2271 /* streamie */ = {
+			isa = PBXGroup;
+			children = (
+				D4025B7F1B4AFD22000C2271 /* AppDelegate.h */,
+				D4025B801B4AFD22000C2271 /* AppDelegate.m */,
+				D4025B871B4AFD22000C2271 /* Images.xcassets */,
+				D4025B891B4AFD22000C2271 /* MainMenu.xib */,
+				D4025B841B4AFD22000C2271 /* streamie.xcdatamodeld */,
+				D4025B7D1B4AFD22000C2271 /* Supporting Files */,
+			);
+			path = streamie;
+			sourceTree = "<group>";
+		};
+		D4025B7D1B4AFD22000C2271 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4025B7E1B4AFD22000C2271 /* Info.plist */,
+				D4025B821B4AFD22000C2271 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4025B931B4AFD22000C2271 /* streamieTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4025B961B4AFD22000C2271 /* streamieTests.m */,
+				D4025B941B4AFD22000C2271 /* Supporting Files */,
+			);
+			path = streamieTests;
+			sourceTree = "<group>";
+		};
+		D4025B941B4AFD22000C2271 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4025B951B4AFD22000C2271 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4025B791B4AFD22000C2271 /* streamie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4025B9A1B4AFD22000C2271 /* Build configuration list for PBXNativeTarget "streamie" */;
+			buildPhases = (
+				D4025B761B4AFD22000C2271 /* Sources */,
+				D4025B771B4AFD22000C2271 /* Frameworks */,
+				D4025B781B4AFD22000C2271 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = streamie;
+			productName = streamie;
+			productReference = D4025B7A1B4AFD22000C2271 /* streamie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4025B8F1B4AFD22000C2271 /* streamieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4025B9D1B4AFD22000C2271 /* Build configuration list for PBXNativeTarget "streamieTests" */;
+			buildPhases = (
+				D4025B8C1B4AFD22000C2271 /* Sources */,
+				D4025B8D1B4AFD22000C2271 /* Frameworks */,
+				D4025B8E1B4AFD22000C2271 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4025B921B4AFD22000C2271 /* PBXTargetDependency */,
+			);
+			name = streamieTests;
+			productName = streamieTests;
+			productReference = D4025B901B4AFD22000C2271 /* streamieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4025B721B4AFD22000C2271 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = schultyy;
+				TargetAttributes = {
+					D4025B791B4AFD22000C2271 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					D4025B8F1B4AFD22000C2271 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = D4025B791B4AFD22000C2271;
+					};
+				};
+			};
+			buildConfigurationList = D4025B751B4AFD22000C2271 /* Build configuration list for PBXProject "streamie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4025B711B4AFD22000C2271;
+			productRefGroup = D4025B7B1B4AFD22000C2271 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4025B791B4AFD22000C2271 /* streamie */,
+				D4025B8F1B4AFD22000C2271 /* streamieTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4025B781B4AFD22000C2271 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4025B881B4AFD22000C2271 /* Images.xcassets in Resources */,
+				D4025B8B1B4AFD22000C2271 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4025B8E1B4AFD22000C2271 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4025B761B4AFD22000C2271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4025B861B4AFD22000C2271 /* streamie.xcdatamodeld in Sources */,
+				D4025B831B4AFD22000C2271 /* main.m in Sources */,
+				D4025B811B4AFD22000C2271 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4025B8C1B4AFD22000C2271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4025B971B4AFD22000C2271 /* streamieTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4025B921B4AFD22000C2271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4025B791B4AFD22000C2271 /* streamie */;
+			targetProxy = D4025B911B4AFD22000C2271 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4025B891B4AFD22000C2271 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4025B8A1B4AFD22000C2271 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4025B981B4AFD22000C2271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D4025B991B4AFD22000C2271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D4025B9B1B4AFD22000C2271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = streamie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4025B9C1B4AFD22000C2271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = streamie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D4025B9E1B4AFD22000C2271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = streamieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/streamie.app/Contents/MacOS/streamie";
+			};
+			name = Debug;
+		};
+		D4025B9F1B4AFD22000C2271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = streamieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/streamie.app/Contents/MacOS/streamie";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4025B751B4AFD22000C2271 /* Build configuration list for PBXProject "streamie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4025B981B4AFD22000C2271 /* Debug */,
+				D4025B991B4AFD22000C2271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4025B9A1B4AFD22000C2271 /* Build configuration list for PBXNativeTarget "streamie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4025B9B1B4AFD22000C2271 /* Debug */,
+				D4025B9C1B4AFD22000C2271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D4025B9D1B4AFD22000C2271 /* Build configuration list for PBXNativeTarget "streamieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4025B9E1B4AFD22000C2271 /* Debug */,
+				D4025B9F1B4AFD22000C2271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D4025B841B4AFD22000C2271 /* streamie.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D4025B851B4AFD22000C2271 /* streamie.xcdatamodel */,
+			);
+			currentVersion = D4025B851B4AFD22000C2271 /* streamie.xcdatamodel */;
+			path = streamie.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D4025B721B4AFD22000C2271 /* Project object */;
+}
