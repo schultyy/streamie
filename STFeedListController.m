@@ -7,6 +7,7 @@
 //
 
 #import "STFeedListController.h"
+#import "STFeedListProtocol.h"
 
 @interface STFeedListController ()
 
@@ -24,7 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+
+    [[self tableView] setTarget:self];
+    [[self tableView] setDoubleAction:@selector(feedDoubleClick:)];
+}
+
+
+-(void) feedDoubleClick: (id) sender {
+    NSLog(@"SENDER %@", sender);
+
+    NSManagedObject *selectedFeed = [[[self arrayController] selectedObjects] firstObject];
+    if(selectedFeed) {
+        [[self delegate] controller:self didSelectFeed:selectedFeed];
+    }
 }
 
 @end

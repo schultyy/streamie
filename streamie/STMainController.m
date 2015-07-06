@@ -10,10 +10,12 @@
 #import "STFeedSheet.h"
 #import "STFeedDownloader.h"
 #import "Underscore.h"
+#import "STEpisodeListController.h"
 
 @interface STMainController ()
 @property (retain) STFeedSheet *feedSheet;
 @property (readwrite, strong) STFeedListController *feedListController;
+@property (readwrite, strong) STEpisodeListController *episodeListController;
 @property (readwrite, strong) STDataContext *dataContext;
 @end
 
@@ -24,6 +26,7 @@
     if(self) {
         [self setDataContext: [[STDataContext alloc] init]];
         [self setFeedListController: [[STFeedListController alloc] initWithDataContext:self.dataContext]];
+        [[self feedListController] setDelegate:self];
     }
     return self;
 }
@@ -72,6 +75,14 @@
     });
 
     [[self dataContext] save: nil];
+}
+
+#pragma mark - STFeedListProtocol
+
+-(void) controller: (STFeedListController *) controller didSelectFeed: (NSManagedObject *)selectedFeed {
+    NSLog(@"SELECTED %@", selectedFeed);
+    [self setEpisodeListController:[[STEpisodeListController alloc] initWithFeed:selectedFeed]];
+    [[self currentView] setContentView:self.episodeListController.view];
 }
 
 @end

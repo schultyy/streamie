@@ -6,6 +6,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="STFeedListController">
             <connections>
+                <outlet property="arrayController" destination="raO-vW-lLh" id="f4G-BP-zB3"/>
+                <outlet property="tableView" destination="etK-xe-lmX" id="Zxn-WA-ZQy"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
