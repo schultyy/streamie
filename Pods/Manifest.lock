@@ -8,11 +8,14 @@ PODS:
     - MWFeedParser/NSString+HTML
   - MWFeedParser/NSDate+InternetDateTime (1.0.1)
   - MWFeedParser/NSString+HTML (1.0.1)
+  - Underscore.m (0.2.0)
 
 DEPENDENCIES:
   - MWFeedParser
+  - Underscore.m (= 0.2.0)
 
 SPEC CHECKSUMS:
   MWFeedParser: 2cf646014c1baf6ad1b08c480b40a08180079247
+  Underscore.m: 227afdd384d108d7f64aea032b4b2a372e9c5104
 
 COCOAPODS: 0.37.0.beta.1

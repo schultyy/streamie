@@ -14,6 +14,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 -(NSManagedObject *) createFeed;
+-(NSManagedObject *) createEpisode;
 -(BOOL) save: (NSError **) error;
 
 @end

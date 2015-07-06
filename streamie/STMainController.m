@@ -9,6 +9,7 @@
 #import "STMainController.h"
 #import "STFeedSheet.h"
 #import "STFeedDownloader.h"
+#import "Underscore.h"
 
 @interface STMainController ()
 @property (retain) STFeedSheet *feedSheet;
@@ -46,9 +47,31 @@
         [feed setValue:self.feedSheet.address forKey:@"address"];
         [[self dataContext] save:nil];
         STFeedDownloader *feedDownloader = [[STFeedDownloader alloc] initWithAddress: self.feedSheet.address];
-        feedDownloader.download;
+        if([feedDownloader download]) {
+            [self storeEpisodes: feedDownloader.feedItems forFeed: feed];
+        }
+
     }
     [self setFeedSheet:nil];
+}
+
+- (void)storeEpisodes:(NSArray *)array forFeed: (NSManagedObject *) feed {
+    NSMutableSet *episodes = [feed mutableSetValueForKey:@"episodes"];
+    Underscore.arrayEach(array, ^(MWFeedItem *episode) {
+        NSManagedObject *episodeEntity = [[self dataContext] createEpisode];
+        [episodeEntity setValue:episode.title forKey:@"title"];
+        [episodeEntity setValue:episode.link forKey:@"link"];
+        [episodeEntity setValue:episode.author forKey:@"author"];
+        [episodeEntity setValue:episode.date forKey:@"date"];
+        [episodeEntity setValue:episode.updated forKey:@"updated"];
+        [episodeEntity setValue:episode.summary forKey:@"summary"];
+        [episodeEntity setValue:episode.content forKey:@"content"];
+        //[episodeEntity setValue:episode.enclosures forKey:@"enclosure"];
+        [episodeEntity setValue:episode.identifier forKey:@"identifier"];
+        [episodes addObject:episodeEntity];
+    });
+
+    [[self dataContext] save: nil];
 }
 
 @end

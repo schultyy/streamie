@@ -15,6 +15,10 @@
     return [NSEntityDescription insertNewObjectForEntityForName:@"STFeedEntity" inManagedObjectContext:self.managedObjectContext];
 }
 
+-(NSManagedObject *) createEpisode {
+    return [NSEntityDescription insertNewObjectForEntityForName:@"STEpisodeEntity" inManagedObjectContext:self.managedObjectContext];
+}
+
 -(BOOL) save: (NSError **) error {
     return [[self managedObjectContext] save:error];
 }
