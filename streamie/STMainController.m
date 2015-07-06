@@ -11,6 +11,7 @@
 
 @interface STMainController ()
 @property (retain) STFeedSheet *feedSheet;
+@property (readwrite, strong) STFeedListController *feedListController;
 @property (readwrite, strong) STDataContext *dataContext;
 @end
 
@@ -20,6 +21,7 @@
     self = [super initWithWindowNibName:@"STMainWindow"];
     if(self) {
         [self setDataContext: [[STDataContext alloc] init]];
+        [self setFeedListController: [[STFeedListController alloc] initWithDataContext:self.dataContext]];
     }
     return self;
 }
@@ -27,7 +29,7 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    [[self currentView] setContentView: self.feedListController.view];
 }
 
 -(void)addFeed {
