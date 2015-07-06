@@ -8,12 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 #import "STMainController.h"
+#import "STDataContext.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong) STMainController *mainController;
 
 -(IBAction)addFeed:(id)sender;
