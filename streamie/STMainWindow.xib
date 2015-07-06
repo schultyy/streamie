@@ -6,7 +6,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="STMainController">
             <connections>
-                <outlet property="currentView" destination="8IE-ws-Jcg" id="vHh-Ym-FqG"/>
+                <outlet property="detailView" destination="v6N-08-gz1" id="suy-3O-WZT"/>
+                <outlet property="masterView" destination="8IE-ws-Jcg" id="Zuv-bO-TNE"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -22,9 +23,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="8IE-ws-Jcg">
-                        <rect key="frame" x="-3" y="-4" width="763" height="440"/>
+                        <rect key="frame" x="-3" y="-4" width="246" height="440"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="761" height="438"/>
+                            <rect key="frame" x="1" y="1" width="244" height="438"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="KaO-ch-i3X"/>
+                        </constraints>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="v6N-08-gz1">
+                        <rect key="frame" x="245" y="-4" width="515" height="440"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="513" height="438"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -32,10 +45,13 @@
                     </box>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="8IE-ws-Jcg" secondAttribute="bottom" id="43d-aV-65D"/>
-                    <constraint firstItem="8IE-ws-Jcg" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="ZhN-wN-1EC"/>
-                    <constraint firstItem="8IE-ws-Jcg" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="iu2-HV-DhG"/>
-                    <constraint firstAttribute="trailing" secondItem="8IE-ws-Jcg" secondAttribute="trailing" id="oEr-MG-U5a"/>
+                    <constraint firstAttribute="bottom" secondItem="v6N-08-gz1" secondAttribute="bottom" id="7iL-dI-CGp"/>
+                    <constraint firstAttribute="bottom" secondItem="8IE-ws-Jcg" secondAttribute="bottom" id="DXQ-g9-tLb"/>
+                    <constraint firstItem="8IE-ws-Jcg" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="Wav-37-F7f"/>
+                    <constraint firstItem="v6N-08-gz1" firstAttribute="leading" secondItem="8IE-ws-Jcg" secondAttribute="trailing" constant="8" id="dau-Cx-UxO"/>
+                    <constraint firstAttribute="trailing" secondItem="v6N-08-gz1" secondAttribute="trailing" id="eIr-ay-YYV"/>
+                    <constraint firstItem="8IE-ws-Jcg" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="q6D-LN-aVl"/>
+                    <constraint firstItem="v6N-08-gz1" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="udO-8V-jSD"/>
                 </constraints>
             </view>
             <connections>

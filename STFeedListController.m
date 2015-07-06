@@ -32,9 +32,10 @@
 
 
 -(void) feedDoubleClick: (id) sender {
-    NSLog(@"SENDER %@", sender);
+    NSInteger selectedRow = [[self tableView] selectedRow];
 
-    NSManagedObject *selectedFeed = [[[self arrayController] selectedObjects] firstObject];
+    NSManagedObject *selectedFeed = [[self arrayController] selectedObjects][0];
+
     if(selectedFeed) {
         [[self delegate] controller:self didSelectFeed:selectedFeed];
     }

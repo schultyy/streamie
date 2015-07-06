@@ -34,7 +34,7 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     
-    [[self currentView] setContentView: self.feedListController.view];
+    [[self masterView] setContentView: self.feedListController.view];
 }
 
 -(void)addFeed {
@@ -80,9 +80,11 @@
 #pragma mark - STFeedListProtocol
 
 -(void) controller: (STFeedListController *) controller didSelectFeed: (NSManagedObject *)selectedFeed {
-    NSLog(@"SELECTED %@", selectedFeed);
+    [[self detailView] setContentView:nil];
+    [self setEpisodeListController:nil];
+    NSLog(@"Selected feed %@", selectedFeed);
     [self setEpisodeListController:[[STEpisodeListController alloc] initWithFeed:selectedFeed]];
-    [[self currentView] setContentView:self.episodeListController.view];
+    [[self detailView] setContentView:self.episodeListController.view];
 }
 
 @end

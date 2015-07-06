@@ -73,6 +73,7 @@
                                 </tableColumns>
                                 <connections>
                                     <binding destination="raO-vW-lLh" name="content" keyPath="arrangedObjects" id="Z3i-s1-dZt"/>
+                                    <binding destination="raO-vW-lLh" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="Z3i-s1-dZt" id="eb3-ck-ihW"/>
                                 </connections>
                             </tableView>
                         </subviews>

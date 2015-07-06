@@ -18,7 +18,8 @@
 @property (readonly, strong) STDataContext *dataContext;
 @property (readonly, strong) STFeedListController *feedListController;
 @property (readonly, strong) STEpisodeListController *episodeListController;
-@property IBOutlet NSBox *currentView;
+@property IBOutlet NSBox *masterView;
+@property IBOutlet NSBox *detailView;
 -(void)addFeed;
 
 @end
