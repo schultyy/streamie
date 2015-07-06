@@ -35,6 +35,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="-2" name="value" keyPath="self.address" id="339-iV-ShA"/>
+                        </connections>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eA4-aJ-Brm">
                         <rect key="frame" x="384" y="13" width="82" height="32"/>
@@ -66,5 +69,6 @@ Gw
             </connections>
             <point key="canvasLocation" x="353" y="199"/>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="Qyb-xN-Wdn"/>
     </objects>
 </document>

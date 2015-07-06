@@ -12,4 +12,8 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+-(NSManagedObject *) createFeed;
+-(BOOL) save: (NSError **) error;
+
 @end

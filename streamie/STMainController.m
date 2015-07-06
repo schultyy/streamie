@@ -11,12 +11,16 @@
 
 @interface STMainController ()
 @property (retain) STFeedSheet *feedSheet;
+@property (readwrite, strong) STDataContext *dataContext;
 @end
 
 @implementation STMainController
 
 -(id) init {
     self = [super initWithWindowNibName:@"STMainWindow"];
+    if(self) {
+        [self setDataContext: [[STDataContext alloc] init]];
+    }
     return self;
 }
 
@@ -34,7 +38,12 @@
 -(void)didEnd:(NSWindow *) sheet
    returnCode:(NSInteger) returnCode
       context:(void *) context {
-    NSLog(@"return code %ld", (long)returnCode);
+    if(returnCode == 0) {
+        NSManagedObject *feed = [[self dataContext] createFeed];
+        [feed setValue:self.feedSheet.address forKey:@"address"];
+        [[self dataContext] save:nil];
+    }
+    [self setFeedSheet:nil];
 }
 
 @end

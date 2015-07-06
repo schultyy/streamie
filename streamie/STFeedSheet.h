@@ -10,6 +10,8 @@
 
 @interface STFeedSheet : NSWindowController
 
+@property (retain) NSString *address;
+
 -(IBAction)addFeed:(id)sender;
 -(IBAction)cancelAddFeed:(id)sender;
 

@@ -7,8 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "STDataContext.h"
 
 @interface STMainController : NSWindowController
+
+@property (readonly, strong) STDataContext *dataContext;
 
 -(void)addFeed;
 

@@ -10,6 +10,15 @@
 
 @implementation STDataContext
 
+
+-(NSManagedObject *) createFeed {
+    return [NSEntityDescription insertNewObjectForEntityForName:@"STFeedEntity" inManagedObjectContext:self.managedObjectContext];
+}
+
+-(BOOL) save: (NSError **) error {
+    return [[self managedObjectContext] save:error];
+}
+
 #pragma mark - Core Data stack
 
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
