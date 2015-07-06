@@ -8,6 +8,7 @@
 
 #import "STMainController.h"
 #import "STFeedSheet.h"
+#import "STFeedDownloader.h"
 
 @interface STMainController ()
 @property (retain) STFeedSheet *feedSheet;
@@ -44,6 +45,8 @@
         NSManagedObject *feed = [[self dataContext] createFeed];
         [feed setValue:self.feedSheet.address forKey:@"address"];
         [[self dataContext] save:nil];
+        STFeedDownloader *feedDownloader = [[STFeedDownloader alloc] initWithAddress: self.feedSheet.address];
+        feedDownloader.download;
     }
     [self setFeedSheet:nil];
 }

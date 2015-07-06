@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6964F6EA07C59C95AF03BED5 /* STFeedDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6964F02B741B09C0EB5323C7 /* STFeedDownloader.m */; };
+		AFA19D42F3420C3B394B9942 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE9E91183908CE64C0DA7B /* libPods.a */; };
 		D4025B811B4AFD22000C2271 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4025B801B4AFD22000C2271 /* AppDelegate.m */; };
 		D4025B831B4AFD22000C2271 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4025B821B4AFD22000C2271 /* main.m */; };
 		D4025B861B4AFD22000C2271 /* streamie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4025B841B4AFD22000C2271 /* streamie.xcdatamodeld */; };
@@ -33,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D6A5924A1C4D1AA0B3B82D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6964F02B741B09C0EB5323C7 /* STFeedDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFeedDownloader.m; sourceTree = "<group>"; };
+		6964F2ECA4FA375F2265FAB0 /* STFeedDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFeedDownloader.h; sourceTree = "<group>"; };
+		887CC349338E9A462EBFF951 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9BAE9E91183908CE64C0DA7B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4025B7A1B4AFD22000C2271 /* streamie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = streamie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4025B7E1B4AFD22000C2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4025B7F1B4AFD22000C2271 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA19D42F3420C3B394B9942 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +83,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C8F3363851373AA307E8C07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D6A5924A1C4D1AA0B3B82D9 /* Pods.debug.xcconfig */,
+				887CC349338E9A462EBFF951 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD7C25F8B2A2B7500E592425 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BAE9E91183908CE64C0DA7B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4025B711B4AFD22000C2271 = {
 			isa = PBXGroup;
 			children = (
 				D4025B7C1B4AFD22000C2271 /* streamie */,
 				D4025B931B4AFD22000C2271 /* streamieTests */,
 				D4025B7B1B4AFD22000C2271 /* Products */,
+				4C8F3363851373AA307E8C07 /* Pods */,
+				CD7C25F8B2A2B7500E592425 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +140,8 @@
 				D4025BA51B4AFFC5000C2271 /* STFeedSheet.h */,
 				D4025BA61B4AFFC5000C2271 /* STFeedSheet.m */,
 				D4025BA71B4AFFC5000C2271 /* STFeedSheet.xib */,
+				6964F02B741B09C0EB5323C7 /* STFeedDownloader.m */,
+				6964F2ECA4FA375F2265FAB0 /* STFeedDownloader.h */,
 			);
 			path = streamie;
 			sourceTree = "<group>";
@@ -150,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4025B9A1B4AFD22000C2271 /* Build configuration list for PBXNativeTarget "streamie" */;
 			buildPhases = (
+				0257E7D76C5693F2CB70DA33 /* Check Pods Manifest.lock */,
 				D4025B761B4AFD22000C2271 /* Sources */,
 				D4025B771B4AFD22000C2271 /* Frameworks */,
 				D4025B781B4AFD22000C2271 /* Resources */,
+				C6CD8030C0162EF64BD386D3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +271,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0257E7D76C5693F2CB70DA33 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6CD8030C0162EF64BD386D3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4025B761B4AFD22000C2271 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -252,6 +316,7 @@
 				D4025B811B4AFD22000C2271 /* AppDelegate.m in Sources */,
 				D4025BAC1B4B0516000C2271 /* STDataContext.m in Sources */,
 				D4025BA81B4AFFC5000C2271 /* STFeedSheet.m in Sources */,
+				6964F6EA07C59C95AF03BED5 /* STFeedDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,23 +431,27 @@
 		};
 		D4025B9B1B4AFD22000C2271 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D6A5924A1C4D1AA0B3B82D9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = streamie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
 		D4025B9C1B4AFD22000C2271 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 887CC349338E9A462EBFF951 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = streamie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
@@ -441,6 +510,7 @@
 				D4025B9C1B4AFD22000C2271 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4025B9D1B4AFD22000C2271 /* Build configuration list for PBXNativeTarget "streamieTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +519,7 @@
 				D4025B9F1B4AFD22000C2271 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
