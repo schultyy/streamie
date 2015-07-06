@@ -13,6 +13,8 @@
 		D4025B881B4AFD22000C2271 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4025B871B4AFD22000C2271 /* Images.xcassets */; };
 		D4025B8B1B4AFD22000C2271 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4025B891B4AFD22000C2271 /* MainMenu.xib */; };
 		D4025B971B4AFD22000C2271 /* streamieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4025B961B4AFD22000C2271 /* streamieTests.m */; };
+		D4025BA31B4AFE01000C2271 /* STMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4025BA11B4AFE01000C2271 /* STMainController.m */; };
+		D4025BA41B4AFE01000C2271 /* STMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4025BA21B4AFE01000C2271 /* STMainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,9 @@
 		D4025B901B4AFD22000C2271 /* streamieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = streamieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4025B951B4AFD22000C2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4025B961B4AFD22000C2271 /* streamieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = streamieTests.m; sourceTree = "<group>"; };
+		D4025BA01B4AFE01000C2271 /* STMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMainController.h; sourceTree = "<group>"; };
+		D4025BA11B4AFE01000C2271 /* STMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMainController.m; sourceTree = "<group>"; };
+		D4025BA21B4AFE01000C2271 /* STMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STMainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,9 @@
 				D4025B891B4AFD22000C2271 /* MainMenu.xib */,
 				D4025B841B4AFD22000C2271 /* streamie.xcdatamodeld */,
 				D4025B7D1B4AFD22000C2271 /* Supporting Files */,
+				D4025BA01B4AFE01000C2271 /* STMainController.h */,
+				D4025BA11B4AFE01000C2271 /* STMainController.m */,
+				D4025BA21B4AFE01000C2271 /* STMainWindow.xib */,
 			);
 			path = streamie;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4025BA41B4AFE01000C2271 /* STMainWindow.xib in Resources */,
 				D4025B881B4AFD22000C2271 /* Images.xcassets in Resources */,
 				D4025B8B1B4AFD22000C2271 /* MainMenu.xib in Resources */,
 			);
@@ -214,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4025B861B4AFD22000C2271 /* streamie.xcdatamodeld in Sources */,
+				D4025BA31B4AFE01000C2271 /* STMainController.m in Sources */,
 				D4025B831B4AFD22000C2271 /* main.m in Sources */,
 				D4025B811B4AFD22000C2271 /* AppDelegate.m in Sources */,
 			);

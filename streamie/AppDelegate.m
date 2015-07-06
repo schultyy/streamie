@@ -10,7 +10,7 @@
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
+@property (readwrite, strong) STMainController *mainController;
 - (IBAction)saveAction:(id)sender;
 
 @end
@@ -18,7 +18,8 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    [self setMainController: [[STMainController alloc] init]];
+    [[self mainController] showWindow:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
