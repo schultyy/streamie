@@ -82,7 +82,6 @@
 -(void) controller: (STFeedListController *) controller didSelectFeed: (NSManagedObject *)selectedFeed {
     [[self detailView] setContentView:nil];
     [self setEpisodeListController:nil];
-    NSLog(@"Selected feed %@", selectedFeed);
     [self setEpisodeListController:[[STEpisodeListController alloc] initWithFeed:selectedFeed]];
     [[self detailView] setContentView:self.episodeListController.view];
 }
