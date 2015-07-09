@@ -15,7 +15,7 @@
 -(id)initWithFeed:(STFeed *)feed {
     self = [super initWithNibName:@"STEpisodeListView" bundle:nil];
     if(self) {
-        [self setEpisodes:NSArray.array];
+        [self setEpisodes:feed.episodes];
     }
     return self;
 }

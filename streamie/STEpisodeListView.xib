@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="84" rowSizeStyle="automatic" viewBased="YES" id="dqq-Y2-pMg">
-                                <rect key="frame" x="0.0" y="0.0" width="238" height="117"/>
+                                <rect key="frame" x="0.0" y="0.0" width="478" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -110,7 +110,7 @@
                 <constraint firstAttribute="trailing" secondItem="NEq-Vk-iow" secondAttribute="trailing" id="tSl-Ku-20p"/>
             </constraints>
         </customView>
-        <arrayController objectClassName="NSManagedObject" automaticallyPreparesContent="YES" id="Dc8-kd-2x3">
+        <arrayController objectClassName="STEpisode" automaticallyPreparesContent="YES" id="Dc8-kd-2x3">
             <declaredKeys>
                 <string>title</string>
                 <string>summary</string>

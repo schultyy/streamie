@@ -3,13 +3,14 @@
 // Copyright (c) 2015 schultyy. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
 
 @interface STFeed : NSObject
 
 @property (readonly, strong) NSString *address;
+@property (readonly, strong) NSArray *episodes;
 
--(id) initWithAddress: (NSString *) address;
+-(id) initWithManagedObject: (NSManagedObject *) managedObject;
 
 @end

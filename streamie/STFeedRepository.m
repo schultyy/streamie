@@ -31,7 +31,7 @@
     [fetchRequest setEntity:[NSEntityDescription entityForName:@"STFeedEntity" inManagedObjectContext:self.dataContext.managedObjectContext]];
     NSArray *entities = [[[self dataContext] managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     return Underscore.arrayMap(entities, ^(NSManagedObject *entity){
-        return [[STFeed alloc] initWithAddress:[entity valueForKey:@"address"]];
+        return [[STFeed alloc] initWithManagedObject:entity];
     });
 }
 
