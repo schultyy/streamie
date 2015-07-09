@@ -11,6 +11,7 @@
 #import "STFeedDownloader.h"
 #import "Underscore.h"
 #import "STEpisodeListController.h"
+#import "STFeedRepository.h"
 
 @interface STMainController ()
 @property (retain) STFeedSheet *feedSheet;
@@ -46,35 +47,14 @@
    returnCode:(NSInteger) returnCode
       context:(void *) context {
     if(returnCode == 0) {
-        NSManagedObject *feed = [[self dataContext] createFeed];
-        [feed setValue:self.feedSheet.address forKey:@"address"];
-        [[self dataContext] save:nil];
-        STFeedDownloader *feedDownloader = [[STFeedDownloader alloc] initWithAddress: self.feedSheet.address];
+        NSString *feedAddress = [[self feedSheet] address];
+        STFeedDownloader *feedDownloader = [[STFeedDownloader alloc] initWithAddress: feedAddress];
         if([feedDownloader download]) {
-            [self storeEpisodes: feedDownloader.feedItems forFeed: feed];
+            STFeedRepository *repository = [[STFeedRepository alloc] init];
+            [repository createNewFeedFromInfo:feedDownloader.feedInfo andFeedItems:feedDownloader.feedItems];
         }
-
     }
     [self setFeedSheet:nil];
-}
-
-- (void)storeEpisodes:(NSArray *)array forFeed: (NSManagedObject *) feed {
-    NSMutableSet *episodes = [feed mutableSetValueForKey:@"episodes"];
-    Underscore.arrayEach(array, ^(MWFeedItem *episode) {
-        NSManagedObject *episodeEntity = [[self dataContext] createEpisode];
-        [episodeEntity setValue:episode.title forKey:@"title"];
-        [episodeEntity setValue:episode.link forKey:@"link"];
-        [episodeEntity setValue:episode.author forKey:@"author"];
-        [episodeEntity setValue:episode.date forKey:@"date"];
-        [episodeEntity setValue:episode.updated forKey:@"updated"];
-        [episodeEntity setValue:episode.summary forKey:@"summary"];
-        [episodeEntity setValue:episode.content forKey:@"content"];
-        //[episodeEntity setValue:episode.enclosures forKey:@"enclosure"];
-        [episodeEntity setValue:episode.identifier forKey:@"identifier"];
-        [episodes addObject:episodeEntity];
-    });
-
-    [[self dataContext] save: nil];
 }
 
 #pragma mark - STFeedListProtocol

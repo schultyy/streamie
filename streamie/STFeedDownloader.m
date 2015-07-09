@@ -8,6 +8,7 @@
 
 @interface STFeedDownloader()
 @property (strong) MWFeedParser *feedParser;
+@property (readwrite, retain) MWFeedInfo *feedInfo;
 @property (readwrite, retain) NSMutableArray *feedItems;
 @end
 
@@ -31,7 +32,7 @@
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
-
+    [self setFeedInfo:info];
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {

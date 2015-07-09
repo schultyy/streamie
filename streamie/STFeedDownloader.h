@@ -9,6 +9,7 @@
 
 @interface STFeedDownloader : NSObject <MWFeedParserDelegate>
 
+@property (readonly, retain) MWFeedInfo *feedInfo;
 @property (readonly, retain) NSArray *feedItems;
 
 -(id) initWithAddress: (NSString *) address;
