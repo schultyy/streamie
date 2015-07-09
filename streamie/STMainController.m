@@ -9,7 +9,6 @@
 #import "STMainController.h"
 #import "STFeedSheet.h"
 #import "STFeedDownloader.h"
-#import "Underscore.h"
 #import "STEpisodeListController.h"
 #import "STFeedRepository.h"
 
@@ -17,7 +16,6 @@
 @property (retain) STFeedSheet *feedSheet;
 @property (readwrite, strong) STFeedListController *feedListController;
 @property (readwrite, strong) STEpisodeListController *episodeListController;
-@property (readwrite, strong) STDataContext *dataContext;
 @end
 
 @implementation STMainController
@@ -25,8 +23,7 @@
 -(id) init {
     self = [super initWithWindowNibName:@"STMainWindow"];
     if(self) {
-        [self setDataContext: [[STDataContext alloc] init]];
-        [self setFeedListController: [[STFeedListController alloc] initWithDataContext:self.dataContext]];
+        [self setFeedListController:[[STFeedListController alloc] initWithRepository:[[STFeedRepository alloc] init]]];
         [[self feedListController] setDelegate:self];
     }
     return self;

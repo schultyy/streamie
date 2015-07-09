@@ -10,6 +10,8 @@
 
 @interface STFeedRepository : NSObject
 
+-(NSArray *) loadFeeds;
+
 -(void) createNewFeedFromInfo: (MWFeedInfo *) feedInfo andFeedItems: (NSArray *) feedItems;
 
 @end

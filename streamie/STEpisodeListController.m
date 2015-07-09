@@ -4,6 +4,7 @@
 //
 
 #import "STEpisodeListController.h"
+#import "STFeed.h"
 
 @interface STEpisodeListController()
 @property (readwrite) NSArray *episodes;
@@ -11,11 +12,10 @@
 
 @implementation STEpisodeListController
 
--(id)initWithFeed:(NSManagedObject *)feed {
+-(id)initWithFeed:(STFeed *)feed {
     self = [super initWithNibName:@"STEpisodeListView" bundle:nil];
     if(self) {
-        NSSet *e = [feed valueForKey:@"episodes"];
-        [self setEpisodes:e.allObjects];
+        [self setEpisodes:NSArray.array];
     }
     return self;
 }

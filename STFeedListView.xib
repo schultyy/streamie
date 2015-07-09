@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="etK-xe-lmX">
-                                <rect key="frame" x="0.0" y="0.0" width="238" height="117"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -72,8 +72,7 @@
                                     </tableColumn>
                                 </tableColumns>
                                 <connections>
-                                    <binding destination="raO-vW-lLh" name="content" keyPath="arrangedObjects" id="Z3i-s1-dZt"/>
-                                    <binding destination="raO-vW-lLh" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="Z3i-s1-dZt" id="eb3-ck-ihW"/>
+                                    <binding destination="raO-vW-lLh" name="content" keyPath="arrangedObjects" id="GSo-vQ-HeX"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -96,9 +95,12 @@
                 <constraint firstAttribute="bottom" secondItem="Sqr-85-xS8" secondAttribute="bottom" id="SVq-yO-XiU"/>
             </constraints>
         </customView>
-        <arrayController mode="entity" entityName="STFeedEntity" automaticallyPreparesContent="YES" id="raO-vW-lLh">
+        <arrayController objectClassName="STFeed" automaticallyPreparesContent="YES" id="raO-vW-lLh">
+            <declaredKeys>
+                <string>address</string>
+            </declaredKeys>
             <connections>
-                <binding destination="-2" name="managedObjectContext" keyPath="self.dataContext.managedObjectContext" id="aH7-Xa-zKN"/>
+                <binding destination="-2" name="contentArray" keyPath="self.feeds" id="yeb-Gw-61m"/>
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="MRn-f7-pWH"/>

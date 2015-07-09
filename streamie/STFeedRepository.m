@@ -8,6 +8,7 @@
 #import "MWFeedInfo.h"
 #import "STDataContext.h"
 #import "Underscore.h"
+#import "STFeed.h"
 
 @interface STFeedRepository()
 
@@ -23,6 +24,15 @@
         [self setDataContext:[[STDataContext alloc] init]];
     }
     return self;
+}
+
+-(NSArray *) loadFeeds {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:[NSEntityDescription entityForName:@"STFeedEntity" inManagedObjectContext:self.dataContext.managedObjectContext]];
+    NSArray *entities = [[[self dataContext] managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    return Underscore.arrayMap(entities, ^(NSManagedObject *entity){
+        return [[STFeed alloc] initWithAddress:[entity valueForKey:@"address"]];
+    });
 }
 
 -(void) createNewFeedFromInfo: (MWFeedInfo *) feedInfo andFeedItems: (NSArray *) feedItems {

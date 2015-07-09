@@ -5,11 +5,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class STFeed;
+
 
 @interface STEpisodeListController : NSViewController
 
 @property (readonly) NSArray *episodes;
 
--(id) initWithFeed: (NSManagedObject *)feed;
+-(id) initWithFeed: (STFeed *)feed;
 
 @end

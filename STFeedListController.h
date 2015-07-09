@@ -10,14 +10,16 @@
 #import "STDataContext.h"
 
 @protocol STFeedListProtocol;
+@class STFeedRepository;
 
 @interface STFeedListController : NSViewController
 
-@property (retain) STDataContext *dataContext;
+@property (readonly, assign) STFeedRepository *repository;
+@property (readonly, strong) NSArray *feeds;
 @property IBOutlet NSTableView *tableView;
 @property IBOutlet NSArrayController *arrayController;
 @property (assign) NSObject<STFeedListProtocol> *delegate;
 
--(id) initWithDataContext: (STDataContext *) context;
+-(id) initWithRepository: (STFeedRepository *) repository;
 
 @end

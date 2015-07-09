@@ -8,17 +8,21 @@
 
 #import "STFeedListController.h"
 #import "STFeedListProtocol.h"
+#import "STFeedRepository.h"
 
 @interface STFeedListController ()
-
+@property (readwrite, assign) STFeedRepository *repository;
+@property (readwrite, strong) NSArray *feeds;
 @end
 
 @implementation STFeedListController
 
--(id) initWithDataContext: (STDataContext *) context {
+-(id)initWithRepository:(STFeedRepository *)repository {
     self = [super initWithNibName:@"STFeedListView" bundle:nil];
     if(self) {
-        [self setDataContext:context];
+        [self setRepository:repository];
+        id feeds = [[self repository] loadFeeds];
+        [self setFeeds:feeds];
     }
     return self;
 }
