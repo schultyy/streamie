@@ -55,9 +55,20 @@
     [episodeEntity setValue:episode.updated forKey:@"updated"];
     [episodeEntity setValue:episode.summary forKey:@"summary"];
     [episodeEntity setValue:episode.content forKey:@"content"];
-    //[episodeEntity setValue:episode.enclosures forKey:@"enclosure"];
     [episodeEntity setValue:episode.identifier forKey:@"identifier"];
+    NSSet *enclosureSet = [[NSSet alloc] initWithArray:[self createEnclosures:episode.enclosures]];
+    [episodeEntity setValue:enclosureSet forKey:@"enclosures"];
     return episodeEntity;
+}
+
+-(NSArray *) createEnclosures: (NSArray *) enclosures {
+    return Underscore.arrayMap(enclosures, ^(NSDictionary *enclosure){
+        NSManagedObject *enclosureEntity = [[self dataContext] createEnclosure];
+        [enclosureEntity setValue:[enclosure valueForKey:@"length"] forKey:@"length"];
+        [enclosureEntity setValue:[enclosure valueForKey:@"url"] forKey:@"url"];
+        [enclosureEntity setValue:[enclosure valueForKey:@"type"] forKey:@"type"];
+        return enclosureEntity;
+    });
 }
 
 @end

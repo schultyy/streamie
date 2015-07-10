@@ -15,6 +15,7 @@
 
 -(NSManagedObject *) createFeed;
 -(NSManagedObject *) createEpisode;
+-(NSManagedObject *) createEnclosure;
 -(BOOL) save: (NSError **) error;
 
 @end

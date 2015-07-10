@@ -4,6 +4,8 @@
 //
 
 #import "STEpisode.h"
+#import "Underscore.h"
+#import "STEnclosure.h"
 
 
 @interface STEpisode()
@@ -12,7 +14,7 @@
 @property (readwrite, strong) NSString *content;
 @property (readwrite, strong) NSDate *date;
 @property (readwrite, strong) NSString *identifier;
-@property (readwrite, strong) NSString *enclosure;
+@property (readwrite, strong) NSArray *enclosures;
 @property (readwrite, strong) NSString *link;
 @property (readwrite, strong) NSString *summary;
 @property (readwrite, strong) NSString *title;
@@ -29,11 +31,13 @@
         [self setContent:[managedObject valueForKey:@"content"]];
         [self setDate:[managedObject valueForKey:@"date"]];
         [self setIdentifier:[managedObject valueForKey:@"identifier"]];
-        //[self setEnclosure:[managedObject valueForKey:@"enclosure"]];
         [self setLink:[managedObject valueForKey:@"link"]];
         [self setSummary:[managedObject valueForKey:@"summary"]];
         [self setTitle:[managedObject valueForKey:@"title"]];
         [self setUpdated:[managedObject valueForKey:@"updated"]];
+        self.enclosures = Underscore.arrayMap([managedObject valueForKey:@"enclosures"], ^(NSManagedObject *enclosureEntity) {
+           return [[STEnclosure alloc] initWithManagedObject:enclosureEntity];
+        });
     }
     return self;
 }

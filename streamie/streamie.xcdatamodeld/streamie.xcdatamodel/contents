@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="STEnclosureEntity" syncable="YES">
+        <attribute name="length" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="STEpisodeEntity" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,6 +15,7 @@
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="enclosures" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="STEnclosureEntity" syncable="YES"/>
         <relationship name="feed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="STFeedEntity" inverseName="episodes" inverseEntity="STFeedEntity" syncable="YES"/>
     </entity>
     <entity name="STFeedEntity" syncable="YES">
@@ -17,7 +23,8 @@
         <relationship name="episodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="STEpisodeEntity" inverseName="feed" inverseEntity="STEpisodeEntity" syncable="YES"/>
     </entity>
     <elements>
+        <element name="STEpisodeEntity" positionX="-54" positionY="0" width="128" height="210"/>
         <element name="STFeedEntity" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="STEpisodeEntity" positionX="-54" positionY="0" width="128" height="195"/>
+        <element name="STEnclosureEntity" positionX="-63" positionY="72" width="128" height="90"/>
     </elements>
 </model>

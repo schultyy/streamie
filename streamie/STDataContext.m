@@ -19,6 +19,10 @@
     return [NSEntityDescription insertNewObjectForEntityForName:@"STEpisodeEntity" inManagedObjectContext:self.managedObjectContext];
 }
 
+-(NSManagedObject *) createEnclosure {
+    return [NSEntityDescription insertNewObjectForEntityForName:@"STEnclosureEntity" inManagedObjectContext:self.managedObjectContext];
+}
+
 -(BOOL) save: (NSError **) error {
     return [[self managedObjectContext] save:error];
 }

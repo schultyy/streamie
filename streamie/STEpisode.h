@@ -12,7 +12,7 @@
 @property (readonly, strong) NSString *content;
 @property (readonly, strong) NSDate *date;
 @property (readonly, strong) NSString *identifier;
-@property (readonly, strong) NSString *enclosure;
+@property (readonly, strong) NSArray *enclosures;
 @property (readonly, strong) NSString *link;
 @property (readonly, strong) NSString *summary;
 @property (readonly, strong) NSString *title;

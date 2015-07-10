@@ -11,6 +11,7 @@
 		6964F6EA07C59C95AF03BED5 /* STFeedDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6964F02B741B09C0EB5323C7 /* STFeedDownloader.m */; };
 		6964F702DFCADF960EC7386F /* STFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6964F5783410724A95E2568C /* STFeed.m */; };
 		6964FB9B4E09B80D1E432F2C /* STEpisodeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6964F96011004BBAD118FC23 /* STEpisodeListController.m */; };
+		6964FD8D0C75CE3694E4D375 /* STEnclosure.m in Sources */ = {isa = PBXBuildFile; fileRef = 6964F0692D3016A6D5E6FC91 /* STEnclosure.m */; };
 		6964FFE528AEDFF5A193A0B3 /* STFeedRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 6964FF9C0BDD79B0E870A548 /* STFeedRepository.m */; };
 		AFA19D42F3420C3B394B9942 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE9E91183908CE64C0DA7B /* libPods.a */; };
 		D4025B811B4AFD22000C2271 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4025B801B4AFD22000C2271 /* AppDelegate.m */; };
@@ -42,8 +43,10 @@
 /* Begin PBXFileReference section */
 		5D6A5924A1C4D1AA0B3B82D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6964F02B741B09C0EB5323C7 /* STFeedDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFeedDownloader.m; sourceTree = "<group>"; };
+		6964F0692D3016A6D5E6FC91 /* STEnclosure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEnclosure.m; sourceTree = "<group>"; };
 		6964F24565E0F0C747AD4159 /* STFeedRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFeedRepository.h; sourceTree = "<group>"; };
 		6964F2ECA4FA375F2265FAB0 /* STFeedDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFeedDownloader.h; sourceTree = "<group>"; };
+		6964F3C6A54D83716CA72544 /* STEnclosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEnclosure.h; sourceTree = "<group>"; };
 		6964F49BAA791ADF60235503 /* STFeedListProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFeedListProtocol.h; sourceTree = "<group>"; };
 		6964F5783410724A95E2568C /* STFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFeed.m; sourceTree = "<group>"; };
 		6964F96011004BBAD118FC23 /* STEpisodeListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEpisodeListController.m; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				6964FD11310D4B029EC4184B /* STFeed.h */,
 				6964FEE6CEA1A06ABC0F9BC3 /* STEpisode.m */,
 				6964FEFA0B35856F67FC007B /* STEpisode.h */,
+				6964F0692D3016A6D5E6FC91 /* STEnclosure.m */,
+				6964F3C6A54D83716CA72544 /* STEnclosure.h */,
 			);
 			path = streamie;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				6964FFE528AEDFF5A193A0B3 /* STFeedRepository.m in Sources */,
 				6964F702DFCADF960EC7386F /* STFeed.m in Sources */,
 				6964F16BFF17401B57B1475E /* STEpisode.m in Sources */,
+				6964FD8D0C75CE3694E4D375 /* STEnclosure.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
